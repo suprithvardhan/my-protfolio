@@ -33,7 +33,7 @@ const Contact = () => {
     <div className={styles.contactContainer}>
       <div className={styles.leftSection}>
         <h1 className={styles.heading}>
-          Let's <br />
+          Let&apos;s <br />
           <span className={styles.connect}>Connect.</span>
         </h1>
         <a href="mailto:suprithvardhanrao@gmail.com" className={styles.email}>suprithvardhanrao@gmail.com</a>
@@ -48,15 +48,15 @@ const Contact = () => {
       <div className={styles.rightSection}>
         <div className={styles.section}>
           <h2 className={styles.hoverTitle} data-hover="Skills">Skills</h2>
-          <p>Check out the things I'm good at, from building websites to design and more.</p>
+          <p>Check out the things I&apos;m good at, from building websites to design and more.</p>
         </div>
         <div className={styles.section}>
           <h2 className={styles.hoverTitle} data-hover="Experience">Experience</h2>
-          <p>Check out the things I'm good at, from building websites to design and more.</p>
+          <p>Check out the things I&apos;m good at, from building websites to design and more.</p>
         </div>
         <div className={styles.section}>
           <h2 className={styles.hoverTitle} data-hover="Resume">Resume</h2>
-          <p>See my work history and what I've achieved in a quick and easy resume.</p>
+          <p>See my work history and what I&apos;ve achieved in a quick and easy resume.</p>
         </div>
       </div>
     </div>
