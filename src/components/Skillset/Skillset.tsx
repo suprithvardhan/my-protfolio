@@ -116,7 +116,7 @@ const Skillset = () => {
 
 export default Skillset;
 
-function getImageSource(index) {
+function getImageSource(index: number) {
     switch (index) {
         case 0:
             return html;
