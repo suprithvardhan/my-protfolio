@@ -1,0 +1,184 @@
+/* components/ResumeCard.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Adjusted */
+  padding: 20px;
+  background: linear-gradient(225deg, #2B0E35 0%, #101113 50%, #0B1014 100%);
+}
+
+.resumeCard {
+  background: linear-gradient(135deg, #1e003a 0%, #3a1c71 50%, #2b2b5e 100%); /* Dark-themed gradient with purple and blue */
+  color: #fff; /* Text color for better visibility */
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for better contrast */
+  padding: 20px;
+  width: 350px;
+  height: 500px;
+  margin: 50px auto 0 auto;
+  position: relative;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.resumeCard:hover {
+  transform: rotate(0deg);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.textContent {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8); /* Adjusted text color */
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 14px;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.8); /* Adjusted text color */
+}
+
+.email {
+  font-size: 14px;
+  color: #ffd700; /* Highlighted color */
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.location {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8); /* Adjusted text color */
+}
+
+.workExperience {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.workExperience h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff; /* Adjusted text color */
+}
+
+.workExperience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.workExperience li {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8); /* Adjusted text color */
+  margin-bottom: 5px;
+}
+
+.viewResumeButton {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 150px;
+  text-align: center;
+}
+
+.viewResumeButton:hover {
+  background-color: #f3c500; /* Darker hover color */
+}
+
+@media (max-width: 768px) {
+  .resumeCard {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    transform: rotate(0);
+  }
+
+  .profileImage {
+    top: -40px;
+    left: calc(50% - 40px);
+  }
+
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .location {
+    font-size: 12px;
+  }
+
+  .workExperience {
+    padding: 15px;
+  }
+
+  .workExperience h3 {
+    font-size: 14px;
+  }
+
+  .workExperience li {
+    font-size: 12px;
+  }
+
+  .viewResumeButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

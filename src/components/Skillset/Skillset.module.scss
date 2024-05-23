@@ -1,0 +1,135 @@
+.skillsetContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 40px;
+    
+}
+
+.contentContainer {
+    flex-basis: 40%;
+    padding-right: 2rem;
+    text-align: center;
+    
+}
+
+.textContainer {
+    padding: 0 0 1rem 0;
+}
+
+.carouselContainer {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    
+    width: 100%; /* Ensure full width on all screens */
+}
+
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.imagesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30rem;
+}
+
+.previousContainer {
+    padding-right: 250px;
+}
+
+.nextContainer {
+    padding-left: 250px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.container {
+    z-index: 2;
+    width: clamp(15rem, 20vw, 20rem);
+    height: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 5px solid transparent;
+    border-radius: 2rem;
+}
+
+.container.active {
+    opacity: 1;
+    border: 1px solid #c0392b;
+    transform: translate(-50%, -50%); /* Ensure it stays centered */
+}
+
+.image {
+    width: clamp(15rem, 20vw, 20rem);
+    height: auto;
+    border: 5px solid #eb5757;
+    border-radius: 2rem;
+}
+
+@media (min-width: 768px) {
+    .skillsetContainer {
+        flex-direction: row;
+    }
+
+    .contentContainer {
+        flex-basis: 40%;
+        justify-content: center;
+        margin-left: 5px;
+        
+    }
+
+    .carouselContainer {
+        flex-basis: 80%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .skillsetContainer {
+        flex-direction: column;
+    }
+    
+    .carouselContainer {
+        order: 1;
+        width: 100%; /* Increase width to 100% on small screens */
+    }
+
+    .contentContainer {
+        order: 2;
+    }
+
+    .carouselWrapper {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .previousContainer {
+        padding-right: 300px;
+        position: absolute; 
+        top: 45%; 
+    }
+
+    .nextContainer {
+        padding-left: 300px; 
+        position: relative;
+        bottom: 50%; /* Adjust the vertical position */
+        transform: translateY(-750%); /* Center the button vertically */
+    }
+}
